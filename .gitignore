@@ -1,3 +1,34 @@
-*.pka
+# ==========================================
+# Network Engineering & Simulation Files
+# ==========================================
+# Cisco Packet Tracer (Standard, Activity, and Secure formats)
 *.pkt
-*.pcapng
+*.pka
+*.pksz
+
+# Wireshark Network Captures (Recursive wildcard covers all subdirectories)
+**/*.pcap
+**/*.pcapng
+**/*.cap
+
+# GNS3 & EVE-NG temporary lab exports (Optional but helpful)
+*.gns3project
+*.unl
+
+# ==========================================
+# IDE & System Clutter (Keep repo clean)
+# ==========================================
+# VS Code files (Except your shared team launch configurations)
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/
+
+# Windows system files (Prevents pushing hidden thumbnail databases)
+Thumbs.db
+desktop.ini
+
+# Mac system files (If you or a classmate uses macOS)
+.DS_Store

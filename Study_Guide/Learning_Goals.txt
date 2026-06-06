@@ -1,0 +1,13 @@
+Learning goals
+1. The student understands how a computer network works and the individual components and protocols involved and can explain it.
+2. The student is able to build a basic physical computer network
+    -  The student cables a physical network with the necessary network equipment and network clients
+    -  The student configures the clients and network equipment
+    -  The student tests the network
+    -  The student analyses the functioning of the network with various tools
+3. The student is able to simulate a basic network
+    - The student builds and configures a network in emulation software
+    - The student analyses the functioning of the network and inspects the network packets
+    - The student can explain the functioning of the protocols learned on the basis of the simulation
+4. The student is able to demonstrate and explain the functioning of the computer network. The student has insight into the underlying functioning of the computer network and the protocols learned and can also answer technical questions about this
+5. The student is able to clearly document their own knowledge acquisition and the functioning of the network

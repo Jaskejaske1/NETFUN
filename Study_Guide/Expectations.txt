@@ -1,0 +1,4 @@
+Expectations
+During this course, I will explain and demonstrate the topics during the theory lessons. You are expected to put this into practice during the lab sessions following the assignments and exercises. You are expected to work on these assignments individually or in a group of maximum 3 students. Each student is expected to understand each part of the assignment, even if you work in a group. You are expected to document your progress and have full understanding of the work that you do. You are the owner of, and are responsible for the networks that you build and present.
+
+You can get help and feedback for the assignments during the lab sessions.

@@ -1,0 +1,151 @@
+
+!
+! No configuration change since last restart
+!
+version 15.0
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname Jasper
+!
+boot-start-marker
+boot-end-marker
+!
+enable secret 5 $1$9jbD$oM0dr10aSH1s3wD8/h4Qr/
+!
+username cisco password 0 cisco
+aaa new-model
+!
+!
+!
+!
+!
+!
+!
+!
+aaa session-id common
+system mtu routing 1500
+!
+!
+ip domain-name lab.local
+!
+!
+crypto pki trustpoint TP-self-signed-940433664
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-940433664
+ revocation-check none
+ rsakeypair TP-self-signed-940433664
+!
+!
+crypto pki certificate chain TP-self-signed-940433664
+ certificate self-signed 01
+  30820229 30820192 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 
+  30312E30 2C060355 04031325 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 39343034 33333636 34301E17 0D393330 33303130 30303131 
+  325A170D 32303031 30313030 30303030 5A303031 2E302C06 03550403 1325494F 
+  532D5365 6C662D53 69676E65 642D4365 72746966 69636174 652D3934 30343333 
+  36363430 819F300D 06092A86 4886F70D 01010105 0003818D 00308189 02818100 
+  B293FDD2 8C2C5A43 D69F4FA2 2FF6360A B22BC7C7 20B35201 BC0020E1 4930E645 
+  B7D06614 C97CB530 2E02AF9C E8F6C79A 3D2EC035 3CB0EBF8 A1862C71 09D2017F 
+  C955C7DB 203BD2C1 9103A815 6A92C28C 07367E73 84A2490D B9F38251 1D77A262 
+  D815EA87 E200DF20 7277FBC5 92E91462 E32F39A6 4EEF4AC4 0B93493E C7EB8B03 
+  02030100 01A35330 51300F06 03551D13 0101FF04 05300301 01FF301F 0603551D 
+  23041830 168014E4 44DA29A2 319955FB 4F4DD639 1F51DD06 244A5F30 1D060355 
+  1D0E0416 0414E444 DA29A231 9955FB4F 4DD6391F 51DD0624 4A5F300D 06092A86 
+  4886F70D 01010505 00038181 007F2C05 0D60C730 B47EEF4A 0D472961 067EE32D 
+  710F4E33 8A91FD93 268C6C94 82719669 C8F38BC8 1DA6678E 17CB5B19 23D76731 
+  9A7261C3 E3D2150F 9E7E1646 99FA36F9 5F5C007F D1FF2B42 25D4600F C9F2EF43 
+  C7D5E563 A6E75476 367EC6D0 B974295E BADC91A6 492B6B39 7303DB78 E42D43EE 
+  B0595CAD 9BF7E58C 4064AB5D 33
+  	quit
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+ip ssh time-out 60
+ip ssh authentication-retries 2
+ip ssh version 2
+!
+!
+!
+!
+!
+interface FastEthernet0/1
+!
+interface FastEthernet0/2
+!
+interface FastEthernet0/3
+!
+interface FastEthernet0/4
+!
+interface FastEthernet0/5
+!
+interface FastEthernet0/6
+!
+interface FastEthernet0/7
+!
+interface FastEthernet0/8
+!
+interface FastEthernet0/9
+!
+interface FastEthernet0/10
+!
+interface FastEthernet0/11
+!
+interface FastEthernet0/12
+!
+interface FastEthernet0/13
+!
+interface FastEthernet0/14
+!
+interface FastEthernet0/15
+!
+interface FastEthernet0/16
+!
+interface FastEthernet0/17
+!
+interface FastEthernet0/18
+!
+interface FastEthernet0/19
+!
+interface FastEthernet0/20
+!
+interface FastEthernet0/21
+!
+interface FastEthernet0/22
+!
+interface FastEthernet0/23
+!
+interface FastEthernet0/24
+!
+interface GigabitEthernet0/1
+!
+interface GigabitEthernet0/2
+!
+interface Vlan1
+ ip address 10.0.0.1 255.255.255.0
+!
+ip http server
+ip http secure-server
+!
+!
+!
+vstack
+!
+line con 0
+ password cisco
+line vty 0 4
+ password cisco
+ transport input telnet
+line vty 5 15
+ transport input ssh
+!
+end
